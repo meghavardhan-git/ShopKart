@@ -87,12 +87,13 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),
         'OPTIONS': {
             'ssl': {
-                'ca': os.path.join(BASE_DIR, 'certs', 'ca.pem') # Or hardcoded path if safe
+                'ca': '/opt/render/project/src/certs/ca.pem'
             }
         }
     }
 }
 
+print("CA PATH:", os.path.join(BASE_DIR, 'certs', 'ca.pem'))
 
 
 
