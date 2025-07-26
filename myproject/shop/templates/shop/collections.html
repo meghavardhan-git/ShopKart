@@ -28,7 +28,7 @@
             {% for item in catog %}
             <div class="col-md-4 col-lg-3">
                 <div class="card my-3">
-                    <img src="{{item.image.url}}" alt="" class="card-image-top" alt="Catogories">
+                    <img src="{{item.image}}" alt="" class="card-image-top" alt="Catogories">
                     <a href="{% url 'collections' item.name%}">
                     <div class="card-body">
                         <h5 class="card-title text-primary">{{item.name}}</h5>

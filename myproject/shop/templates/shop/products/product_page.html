@@ -1,5 +1,5 @@
 {% extends 'shop/layouts/main.html' %}
-
+{% load cloudinary_tags %}
 {% block title %}
 ShopKart | {{ products.name }}
 {% endblock %}
@@ -29,7 +29,7 @@ ShopKart | {{ products.name }}
         {% if products.trending %}
         <div class="hot">Hot 🔥</div>
         {% endif %}
-        <img src="{{ products.prod_image.url }}" class="img-fluid" alt="{{ products.name }}">
+        <img src="{{ products.prod_image|cloudinary_img  }}" class="img-fluid" alt="{{ products.name|cloudinary_img  }}">
       </div>
 
       <div class="col-md-8 my-3">
