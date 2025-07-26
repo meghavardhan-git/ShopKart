@@ -21,7 +21,7 @@ ShopKart | Online shopping
             {% for item in products %}
             <div class="col-md-4 col-lg-3">
                 <div class="card my-3 h-100">
-                    <img src="{{ item.prod_image|cloudinary_img  }}" class="card-img-top" alt="{{ item.name }}">
+                    <img src="{{ item.prod_image.url }}" class="card-img-top" alt="{{ item.name }}">
                     <a href="{% url 'product_details' catog_name item.name %}">
                         <div class="card-body">
                             <h5 class="card-title text-primary">{{ item.name }}</h5>

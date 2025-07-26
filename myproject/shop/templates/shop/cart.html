@@ -23,7 +23,7 @@
                 </tr>
                 {% for item in cart %}
                 <tr>
-                    <td><img src="{{item.product.prod_image|cloudinary_img }}" height="75px" alt="{{item.product.prod_image|cloudinary_img }}"></td>
+                    <td><img src="{{item.product.prod_image.url }}" height="75px" alt="{{item.product.prod_image|cloudinary_img }}"></td>
                     <td>{{ item.product.name }}</td>
                     <td>{{item.product.selling_price| stringformat:'d'}}</td>
                     <td>{{item.product_qty}}</td>
